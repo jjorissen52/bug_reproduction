@@ -50,7 +50,14 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+
+    # Always include for two-factor auth
     'django_otp.middleware.OTPMiddleware',
+
+    # Include for twilio gateway
+    'two_factor.middleware.threadlocals.ThreadLocals',
+
+
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
