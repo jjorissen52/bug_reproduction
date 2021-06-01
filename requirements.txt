@@ -15,4 +15,4 @@ qrcode==6.0
 requests==2.19.1
 six==1.11.0
 twilio==6.16.3
-urllib3==1.23
+urllib3==1.26.5
